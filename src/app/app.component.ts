@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HomeComponent } from './home/home.component';
+import { RouterModule } from '@angular/router';
 
 
 @Component({
@@ -11,11 +12,11 @@ import { HomeComponent } from './home/home.component';
     <img src="/assets/logo.svg" alt="logo" arial-hidden="true" class="brand-logo">
   </header>
   <section class="content"></section>
-  <app-home></app-home>
+  <router-outlet></router-outlet>
   </main>
   `,
     styleUrls: ['./app.component.css'],
-    imports: [HomeComponent]
+    imports: [HomeComponent, RouterModule]
 })
 export class AppComponent {
   title = 'homes';
